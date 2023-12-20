@@ -1,0 +1,250 @@
+$background: #2b3544ff;
+
+$background-primary: #111827ff;
+
+$background-buttons: #374151;
+
+$background-buttons-symbols: #6b7280ff;
+
+$background-buttons-equal: #6366f1ff;
+
+$color-text-primary: #e5e7ebff;
+
+$color-text-secondary: #d1d5dbff;
+
+@font-face {
+  font-family: "Lexend-Thin";
+  src: url("./assets/fonts/Lexend-Thin.ttf");
+}
+@font-face {
+  font-family: "Lexend-Light";
+  src: url("./assets/fonts/Lexend-Light.ttf");
+}
+@font-face {
+  font-family: "Lexend-ExtraLight";
+  src: url("./assets/fonts/Lexend-ExtraLight.ttf");
+}
+@font-face {
+  font-family: "Lexend-Regular";
+  src: url("./assets/fonts/Lexend-Regular.ttf");
+}
+
+@keyframes  moveVertical {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+  
+}
+
+
+:root {
+  padding: 2rem;
+  text-align: center;
+  background-color: $background;
+  color: $color-text-primary;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  font-family: "Lexend-Light";
+  
+}
+
+.bodyContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-height: 327px;
+  overflow: hidden;
+  border-radius: 2rem;
+  background-color: $background-buttons;
+  box-shadow: 0 10px 1rem 0.2rem rgba(0, 0, 0, 0.5);
+
+}
+.MainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  padding: 2rem 1rem 0rem 1rem;
+
+  overflow: hidden;
+  gap: 1rem;
+  background-color: $background-primary;
+
+  .contInput {
+    background-color: transparent;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    input {
+      background-color: transparent;
+      text-align: right;
+      border: none;
+      outline: none;
+      font-size: 2rem;
+      color: $color-text-primary;
+      font-family: "Lexend-Light";
+    }
+    h4 {
+      margin: 0;
+      padding: 0;
+      font-size: 1.8rem;
+      color: $color-text-secondary;
+      font-family: "Lexend-Thin";
+      
+    }
+  }
+  .contButtons {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.75rem;
+    background-color: $background-buttons;
+    width: 95%;
+    padding: 1rem 1rem 1.5rem 0.5rem;
+    border-radius: 2rem;
+    border-bottom-left-radius: 0rem;
+    hr{
+      width: 0.4rem;
+      background-color: $color-text-secondary;
+      border: none;
+      border-radius: 2rem;
+      height: 5rem;
+      margin-right: 1rem;
+      align-self: center;
+      cursor: pointer;
+    }
+    .hrWidth{
+      width: 1.5rem;
+    }
+    button {
+      font-size: 1.8rem;
+      width: 4rem;
+      height: 2.5rem;
+      border-radius: 2rem;
+      border: none;
+      cursor: pointer;
+      color: $color-text-primary;
+      font-family: "Lexend-Light";
+      box-shadow: 0 1.5px 0.11rem 0.05rem rgba(0, 0, 0, 0.35);
+    }
+    .buttonNumber {
+      background-color: $background-primary;
+    }
+    .buttonEqual {
+      background-color: $background-buttons-equal;
+    }
+    .buttonSymbol {
+      background-color: $background-buttons-symbols;
+    }
+    .buttonDelete {
+      background-color: $color-text-primary;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img{
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+    .cont1_9 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      grid-gap: 0.5rem;
+      column-gap: 0.75rem;
+    }
+    .contSymbol {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      grid-gap: 0.5rem;
+      column-gap: 0.75rem;
+    }
+  }
+  .contCientific{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 0.5rem;
+    .buttonCientific{
+      background-color: $background-primary;
+      color: $color-text-primary;
+      font-family: "Lexend-Light";
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.contHistory{
+  animation: moveVertical 0.7s ease-in-out;
+  width: 326px;
+  height: 327px;
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: start;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  .historyLogo{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    img{
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+    h1{
+      padding: 0;
+      margin: 0;
+      font-family: 'Lexend-Thin';
+      font-size: 1.3rem;
+      color: $color-text-primary;
+    }
+  }
+
+  section{
+    height: 80%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 1rem;
+
+    div{
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      gap: 0.2rem;
+      h3{
+        padding: 0;
+        margin: 0;
+        font-family: 'Lexend-Thin';
+        font-size: 1.2rem;
+        color: $color-text-secondary;
+  
+      }
+      h2{
+        padding: 0;
+        margin: 0;
+        font-family: 'Lexend-ExtraLight';
+        letter-spacing: 0.1rem;
+        font-size: 1.4rem;
+        color: $color-text-primary;
+      }
+    }
+  }
+}
